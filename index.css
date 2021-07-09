@@ -1,0 +1,121 @@
+.container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.elevador {
+    width: 50%;
+}
+
+.elevador>div {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    background-color: aquamarine;
+    margin: 0 auto;
+    display: flex;
+}
+
+
+.elevador .tunel {
+    position: relative;
+    width: 100px;
+    height: 100%;
+    background-color: rgb(90, 90, 90);
+}
+
+.tunel .box {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    left:0;
+    background-color: rgb(160, 160, 160)
+}
+
+.andares div {
+    display: flex;
+    height: 100px;
+
+
+}
+
+.andares :last-child .baixo{
+    display: none;
+
+}
+
+.andares :first-child .cima{
+    display: none;
+
+}
+
+.porta {
+    display: none;
+}
+
+
+.painel {
+    width: 50%; 
+}
+
+.painel>.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 380px;
+    height: 480px;
+    background-color: rgb(88, 86, 86);
+    margin: 0 auto;
+
+    padding: 10px;
+
+}
+
+.painel .display {
+    background-color: rgb(133, 132, 132);
+    width: 100%;
+    height: 150px;
+}
+
+.painel .buttons {
+    display: grid;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.buttons>div {
+    background-color: rgb(133, 132, 132);
+    border-radius: 20%;
+    text-align: center;
+    padding-top: 50%;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    -ms-border-radius: 20%;
+    -o-border-radius: 20%;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column-reverse;
+    }
+    .elevador {
+        width: 100%;
+    }
+    .painel {
+        width: 100%;
+    }
+}
