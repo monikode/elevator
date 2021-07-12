@@ -10,6 +10,15 @@ $(document).ready(function () {
       if (fila.length < 3) add($(this).text() - 0);
     });
   }
+
+  $(".cima").click(function () {
+    var aux = 4 - $(".cima").index(this);
+    add(aux)
+  });
+  $(".baixo").click(function () {
+    var aux = 4 - $(".baixo").index(this);
+    add(aux)
+  });
 });
 
 function add(andar) {
@@ -74,6 +83,3 @@ function fecharPortas(andar) {
   $(".porta:eq(" + andar + ") .portas .p2").animate({ right: "0px" });
   $(".porta:eq(" + andar + ") .portas .p1").animate({ left: "0px" });
 }
-
-
-
